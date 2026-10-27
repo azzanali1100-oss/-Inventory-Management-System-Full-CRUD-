@@ -1,0 +1,43 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Bank Account API",
+			"type": "shell",
+			"command": "${workspaceFolder}\\.venv-1\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"uvicorn",
+				"app.main:app",
+				"--host",
+				"127.0.0.1",
+				"--port",
+				"8001"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Bank Account Streamlit UI",
+			"type": "shell",
+			"command": "${workspaceFolder}\\.venv-1\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"streamlit",
+				"run",
+				"streamlit_app.py",
+				"--server.address",
+				"127.0.0.1",
+				"--server.port",
+				"8502"
+			],
+			"options": {
+				"env": {
+					"BANK_API_URL": "http://127.0.0.1:8001"
+				}
+			},
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

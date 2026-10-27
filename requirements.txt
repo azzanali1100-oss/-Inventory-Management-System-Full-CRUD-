@@ -1,0 +1,8 @@
+fastapi[standard]
+streamlit
+requests
+sqlalchemy
+pyodbc
+joblib
+scikit-learn==1.6.1
+lightgbm

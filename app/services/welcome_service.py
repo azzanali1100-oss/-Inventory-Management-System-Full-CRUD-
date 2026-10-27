@@ -1,0 +1,1 @@
+def get_welcome_messages(name: str):    return [        "Hello, " + name + "!",        "Welcome to the course.",        "Let's get started.",    ]
